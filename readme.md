@@ -1,7 +1,9 @@
 ## Installation
 
 1) Create and fill `.env` file.
+
 1.1) Setup your MySQL server credentials 
+
 1.2) Populate actual credentials of you Twilio account to string prefixed with TWILIO_
 
 2) Execute `composer update` 
