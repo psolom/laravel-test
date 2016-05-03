@@ -19,6 +19,7 @@ class CreateCallLogTable extends Migration
             $table->string('phone_to');
             $table->string('phone_target');
             $table->dateTime('time_end')->nullable()->default(null);
+            $table->tinyInteger('sms_sent')->default('0');
             $table->text('data');
             $table->timestamps();
             $table->index('created_at');

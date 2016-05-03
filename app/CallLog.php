@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $phone_to
  * @property string $phone_target
  * @property string $time_end
+ * @property string $sms_sent
  * @property string $data
  */
 class CallLog extends Model
