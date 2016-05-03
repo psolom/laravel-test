@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <title>Call us</title>
+    <meta name="csrf-token" content="<?=csrf_token()?>">
+
     <link rel="stylesheet" href="/css/site.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
