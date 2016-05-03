@@ -10,10 +10,9 @@ class SmsController extends BaseController
 {
     /**
      * Handle incoming call
-     * @param Request $request
      * @return View
      */
-    public function incoming(Request $request)
+    public function incoming()
     {
         $targetNumber = config('twilio.config')['target'];
         $messageBody = $_REQUEST['Body'];

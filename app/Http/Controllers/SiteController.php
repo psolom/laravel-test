@@ -33,10 +33,9 @@ class SiteController extends BaseController
 
     /**
      * Looking for phone number in selected country
-     * @param Request $request
      * @return mixed
      */
-    public function phone(Request $request)
+    public function phone()
     {
         $countryCode = Input::get('countryCode');
         if($countryCode) {

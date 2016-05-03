@@ -2,6 +2,7 @@
 
 use App\CallLog;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Support\Facades\View;
 use Twilio;
@@ -11,10 +12,9 @@ class CallController extends BaseController
 {
     /**
      * Handle incoming call
-     * @param Request $request
      * @return View
      */
-    public function incoming(Request $request)
+    public function incoming()
     {
         header("content-type: text/xml");
         $targetNumber = config('twilio.config')['target'];
@@ -31,14 +31,14 @@ class CallController extends BaseController
         $response = new Services_Twilio_Twiml();
         $response->dial($targetNumber);
         print $response;
+        die();
     }
 
     /**
      * Handle after incoming call is completed
-     * @param Request $request
      * @return View
      */
-    public function completed(Request $request)
+    public function completed()
     {
         $model = CallLog::where('call_sid', '=', $_REQUEST['CallSid'])->first();
         if($model !== null) {
