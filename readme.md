@@ -8,22 +8,28 @@
   
 3) Execute `php artisan migrate` to create 2 MySQL log tables for calls and SMS
 
-## Description 
+## Controllers 
 
-1) Controllers
-app/Http/Controllers/SiteController - main controller to handle requests to the main page 
+app/Http/Controllers/SiteController - main controller to handle requests to the main page
+
 app/Http/Controllers/CallController - handle Twilio's incoming calls
+
 app/Http/Controllers/SmsController - handle Twilio's incoming sms
 
-2) Models
+## Models
+
 app/CallLog.php - calls log model
+
 app/SmsLog.php - sms log model
 
-3) Twilio component
+## Twilio component
+
 app/Providers/Twilio - folder, contains Twilio component files: main class, service provider and facade
     
-4) Commands
+## Commands
+
 app/Console/Commands/Notify.php - console command to send SMS 18 minutes late after call end (cover bonus tasks)
 
-5) Tests:
+## Tests
+
 tests/SiteTest.php - covers general requests for SiteController
